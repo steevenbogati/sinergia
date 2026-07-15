@@ -1,0 +1,233 @@
+/* ============================================================
+   SINERGIA MED — header.css
+   Navbar, logo, menú desktop, hamburguesa, dropdowns
+   ============================================================ */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Franja superior — redes + CTA */
+.header-top {
+  background: var(--color-primary);
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+.header-top__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.social-icon {
+  color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.social-icon:hover {
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+.header-cta {
+  padding: 7px 20px;
+  font-size: 0.82rem;
+}
+
+/* Navbar principal */
+.main-nav {
+  background: var(--color-white);
+  border-bottom: 1px solid rgba(71,68,65,0.1);
+  padding: 12px 0;
+  transition: box-shadow 0.3s ease;
+}
+.site-header.scrolled .main-nav {
+  box-shadow: var(--shadow-md);
+}
+.main-nav__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.nav-logo img {
+  height: 56px;
+  width: auto;
+}
+
+/* Menú */
+.nav-menu {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.nav-link {
+  display: block;
+  font-weight: 600;
+  font-size: 0.87rem;
+  padding: 8px 14px;
+  color: var(--color-text);
+  border-radius: 6px;
+  transition: var(--transition);
+}
+.nav-link:hover {
+  background: var(--color-light-bg);
+  color: var(--color-primary);
+}
+.nav-link.active {
+  color: var(--color-accent);
+}
+.nav-arrow {
+  font-size: 0.7em;
+  opacity: 0.7;
+}
+
+/* Dropdowns (desktop) */
+.has-dropdown { position: relative; }
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-white);
+  min-width: 220px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) translateX(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  border: 1px solid var(--color-cream);
+  z-index: 50;
+}
+.has-dropdown:hover > .dropdown,
+.has-dropdown:focus-within > .dropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(4px) translateX(-10px);
+}
+
+/* PUENTE INVISIBLE (desktop).
+   Entre el enlace y el desplegable quedaba un hueco de ~10px que no
+   pertenecía a ninguno de los dos: al bajar el ratón hacia una opción,
+   se perdía el :hover y el menú se cerraba antes de llegar.
+   Esta franja transparente pertenece al desplegable (y por tanto al <li>),
+   así que el ratón nunca sale de la zona activa al recorrerla. */
+@media (min-width: 769px) {
+  .dropdown::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -18px;      /* cubre el hueco y algo más, por holgura */
+    height: 18px;
+  }
+  /* Lo mismo para el submenú lateral: amplía su zona activa hacia el
+     elemento padre, para que el recorrido en diagonal no lo cierre. */
+  .sub-dropdown::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -14px;
+    width: 14px;
+  }
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.dropdown-link:hover {
+  background: var(--color-light-bg);
+  color: var(--color-accent);
+}
+
+/* Dropdown ancho (Tecnología) — dos columnas en desktop */
+@media (min-width: 769px) {
+  .dropdown--wide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 470px;
+  }
+}
+
+/* Sub-dropdown (flyout a la derecha) */
+.has-sub { position: relative; }
+.sub-dropdown {
+  position: absolute;
+  left: 100%;
+  top: -8px;
+  min-width: 200px;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  border: 1px solid var(--color-cream);
+}
+.has-sub:hover > .sub-dropdown,
+.has-sub:focus-within > .sub-dropdown {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+.sub-dropdown a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: var(--transition);
+}
+.sub-dropdown a:hover {
+  background: var(--color-light-bg);
+  color: var(--color-accent);
+}
+
+/* Hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  position: relative;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }

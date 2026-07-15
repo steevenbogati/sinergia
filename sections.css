@@ -1,0 +1,391 @@
+/* ============================================================
+   SINERGIA MED — sections.css
+   Todas las secciones de contenido
+   ============================================================ */
+
+/* --- SECCIÓN 3: Tecnología de vanguardia ------------------- */
+.section-tecnologia {
+  background: var(--color-white);
+  padding: var(--section-padding);
+}
+.tecnologia-text {
+  max-width: 700px;
+}
+
+/* --- SECCIÓN 4: Grid de robots ------------------------------ */
+.section-robots {
+  background: var(--color-light-bg);
+  padding: var(--section-padding);
+}
+/* Flex (no grid): con 5 tarjetas la última fila queda CENTRADA,
+   sin el hueco vacío que dejaba el grid de 3 columnas. */
+.robots-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+.robot-card {
+  flex: 0 1 calc((100% - 56px) / 3);
+  min-width: 0;
+  background: var(--color-white);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.robot-card__body { flex-grow: 1; }
+.robot-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+.robot-card__img-wrap {
+  display: block;
+  background: var(--color-cream);
+  height: 240px;
+  overflow: hidden;
+}
+/* Las fotos reales llenan la tarjeta (encuadre ligeramente alto para los retratos) */
+.robot-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 0.5s ease;
+}
+.robot-card:hover .robot-card__img-wrap img {
+  transform: scale(1.05);
+}
+.robot-card__body {
+  padding: 24px;
+}
+.robot-card__body p {
+  font-size: 0.94rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+.robot-card__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+.robot-card__link {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 14px;
+  display: inline-block;
+  transition: var(--transition);
+}
+.robot-card__link:hover {
+  color: var(--color-accent-hover);
+}
+
+/* --- SECCIÓN 5: Banner logro -------------------------------- */
+.banner-logro {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 80px 0;
+  text-align: center;
+}
+.banner-logro h2 {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 36px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- SECCIÓN 6: Especialistas + widget WhatsApp ------------- */
+.section-especialistas {
+  background: var(--color-white);
+}
+.especialistas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: var(--section-padding);
+}
+.side-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+.wa-widget {
+  background: var(--color-cream);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(127,121,108,0.2);
+}
+.wa-widget__header {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.wa-widget__avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-accent);
+}
+.wa-widget__name {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+.wa-widget__status {
+  font-size: 0.8rem;
+  color: #4caf50;
+  font-weight: 500;
+}
+.wa-widget__bubble {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+}
+.wa-widget__btn {
+  display: block;
+  text-align: center;
+  background: var(--color-whatsapp);
+  color: var(--color-white);
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+.wa-widget__btn:hover {
+  opacity: 0.9;
+}
+
+/* --- SECCIÓN 7: Tipos de lesiones --------------------------- */
+.section-lesiones {
+  background: var(--color-white);
+  padding: var(--section-padding);
+}
+/* Igual que robots-grid: última fila centrada, sin hueco vacío */
+.lesiones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+/* Tarjeta con foto (mismo lenguaje visual que .robot-card) */
+.lesion-card {
+  flex: 0 1 calc((100% - 56px) / 3);
+  min-width: 0;
+  background: var(--color-white);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.lesion-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+.lesion-card__img-wrap {
+  display: block;
+  background: var(--color-cream);
+  height: 200px;
+  overflow: hidden;
+}
+.lesion-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.lesion-card:hover .lesion-card__img-wrap img {
+  transform: scale(1.05);
+}
+.lesion-card__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.lesion-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+.lesion-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  flex-grow: 1;
+}
+.lesion-card__link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.lesion-card__link:hover {
+  color: var(--color-accent-hover);
+}
+
+/* --- SECCIÓN 8: Banner contador ----------------------------- */
+.banner-contador {
+  background: var(--color-accent);
+  color: var(--color-white);
+  text-align: center;
+  padding: 80px 0;
+}
+.banner-contador h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.contador-numero {
+  display: block;
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: 900;
+  line-height: 1;
+  margin: 16px 0 8px;
+  color: var(--color-cream);
+}
+
+/* --- SECCIÓN 9: Especializaciones (chips) ------------------- */
+.section-especializaciones {
+  background: var(--color-light-bg);
+  padding: var(--section-padding);
+}
+/* Zonas del cuerpo: tarjeta con foto real (antes eran iconos poco legibles) */
+.chips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.chip {
+  display: block;
+  background: var(--color-white);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+.chip:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+.chip__img {
+  display: block;
+  height: 145px;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+.chip__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.chip:hover .chip__img img {
+  transform: scale(1.06);
+}
+.chip__label {
+  display: block;
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+/* --- SECCIÓN 11: Equipo ------------------------------------- */
+.section-equipo {
+  background: var(--color-white);
+}
+.equipo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: var(--section-padding);
+}
+.equipo-img img {
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+}
+
+/* --- SECCIÓN 12: Blog --------------------------------------- */
+.section-blog {
+  background: var(--color-light-bg);
+  padding: var(--section-padding);
+}
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.blog-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: var(--color-white);
+  transition: var(--transition);
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.blog-card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.blog-card__body {
+  padding: 20px;
+}
+.blog-card__date {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: 8px;
+}
+.blog-card__title a {
+  font-weight: 700;
+  font-size: 0.97rem;
+  color: var(--color-primary);
+  line-height: 1.4;
+  transition: var(--transition);
+}
+.blog-card__title a:hover {
+  color: var(--color-accent);
+}
+.blog-card__more {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-top: 14px;
+  display: inline-block;
+  transition: var(--transition);
+}
+.blog-card__more:hover {
+  color: var(--color-accent-hover);
+}

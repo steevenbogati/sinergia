@@ -1,0 +1,46 @@
+/* ============================================================
+   SINERGIA MED — animations.css
+   Animaciones de entrada al hacer scroll.
+
+   IMPORTANTE: la clase .anim la añade js/anim.js, NO el HTML.
+   Así, si el JS no llega a ejecutarse, el contenido se ve
+   normalmente y nunca queda invisible.
+
+   Este archivo se carga EL ÚLTIMO para que su transition gane
+   sobre la de las tarjetas (.robot-card, .lesion-card…).
+   ============================================================ */
+
+.anim {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.22, 0.7, 0.25, 1),
+              transform 0.8s cubic-bezier(0.22, 0.7, 0.25, 1);
+}
+
+/* Estado final: visible y sin desplazamiento */
+.anim--in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Variantes de entrada */
+.anim.anim-fade  { transform: none; }
+.anim.anim-left  { transform: translateX(-45px); }
+.anim.anim-right { transform: translateX(45px); }
+.anim.anim-zoom  { transform: scale(0.92); }
+
+/* En móvil los desplazamientos laterales se suavizan (evita saltos) */
+@media (max-width: 768px) {
+  .anim.anim-left,
+  .anim.anim-right { transform: translateY(30px); }
+}
+
+/* Accesibilidad: quien pida menos movimiento, lo ve todo estático */
+@media (prefers-reduced-motion: reduce) {
+  .anim,
+  .anim--in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

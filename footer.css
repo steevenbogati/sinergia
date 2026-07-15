@@ -1,0 +1,71 @@
+/* ============================================================
+   SINERGIA MED — footer.css
+   ============================================================ */
+
+.site-footer {
+  background: var(--color-footer-bg);
+}
+.footer-main {
+  padding: 64px 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+}
+
+.footer-brand img {
+  margin-bottom: 20px;
+}
+.footer-tagline {
+  font-size: 0.88rem;
+  color: rgba(250,247,215,0.7);
+  line-height: 1.7;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+.footer-social__icon {
+  color: rgba(250,247,215,0.6);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.footer-social__icon:hover {
+  color: var(--color-cream);
+}
+
+.footer-col__title {
+  color: var(--color-cream);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-list li {
+  margin-bottom: 10px;
+}
+.footer-list a,
+.footer-list span {
+  font-size: 0.88rem;
+  color: rgba(250,247,215,0.65);
+  transition: var(--transition);
+}
+.footer-list a:hover {
+  color: var(--color-cream);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(250,247,215,0.1);
+  padding: 18px 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(250,247,215,0.4);
+}
