@@ -2,4 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/sinergia/public_html/
-    - /usr/bin/rsync -a --delete --exclude='.git/' --exclude='.github/' --exclude='.cpanel.yml' --exclude='.gitignore' --exclude='README.md' --exclude='php.ini' --exclude='cgi-bin/' ./ "$DEPLOYPATH"
+    - /bin/rm -rf "${DEPLOYPATH}assets" "${DEPLOYPATH}css" "${DEPLOYPATH}js"
+    - /bin/rm -f "${DEPLOYPATH}"*.html
+    - /bin/cp -a assets css js "$DEPLOYPATH"
+    - /bin/cp -a ./*.html "$DEPLOYPATH"
