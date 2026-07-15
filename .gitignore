@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs / temporales
+*.log
+Thumbs.db
