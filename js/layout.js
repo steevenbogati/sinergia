@@ -42,7 +42,7 @@
     '<nav id="main-nav" class="main-nav" aria-label="Navegación principal">' +
       '<div class="container main-nav__inner">' +
         '<a href="index.html" class="nav-logo">' +
-          '<img src="assets/logos/logo-oscuro.png" alt="SINERGIA MED - Medical Biohacking Center" width="180" />' +
+          '<img src="assets/logos/logo-oscuro.svg" alt="SINERGIA MED - Medical Biohacking Center" width="180" />' +
         '</a>' +
         '<ul class="nav-menu" id="nav-menu">' +
           '<li class="nav-item"><a href="index.html" class="nav-link' + cls('inicio') + '">Inicio</a></li>' +
@@ -103,7 +103,7 @@
     '<div class="footer-main">' +
       '<div class="container footer-grid">' +
         '<div class="footer-brand">' +
-          '<a href="index.html"><img src="assets/logos/logo-claro.png" alt="SINERGIA MED" width="160" loading="lazy" /></a>' +
+          '<a href="index.html"><img src="assets/logos/logo-claro.svg" alt="SINERGIA MED" width="160" loading="lazy" /></a>' +
           '<p class="footer-tagline">Recupera tu movilidad y tu bienestar con la precisión de la tecnología médica y la experiencia de nuestros especialistas.</p>' +
           '<div class="footer-social">' +
             '<a href="' + IG_LINK + '" target="_blank" rel="noopener" aria-label="Instagram" data-red="instagram" class="footer-social__icon">' + svgInstagram + '</a>' +
