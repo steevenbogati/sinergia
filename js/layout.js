@@ -11,7 +11,9 @@
 
   // Datos de contacto (edítalos aquí una sola vez para todo el sitio)
   var WA_LINK = 'https://wa.me/593984229440';
-  var IG_LINK = 'https://www.instagram.com/sinergia_med/';
+  var IG_LINK = 'https://www.instagram.com/sinergiamed.ec';
+  var FB_LINK = 'https://www.facebook.com/sinergiamed.ec';
+  var TT_LINK = 'https://www.tiktok.com/@sinergiamed.ec';
   var MAPS_LINK = 'https://maps.app.goo.gl/xpyZshiGyJ34z3Dy6';
 
   var activePage = document.body.getAttribute('data-page') || '';
@@ -31,9 +33,8 @@
       '<div class="container header-top__inner">' +
         '<div class="header-social">' +
           '<a href="' + IG_LINK + '" target="_blank" rel="noopener" aria-label="Instagram" data-red="instagram" class="social-icon">' + svgInstagram + '</a>' +
-          '<a href="#" aria-label="Facebook" data-red="facebook" class="social-icon">' + svgFacebook + '</a>' +
-          '<a href="#" aria-label="TikTok" data-red="tiktok" class="social-icon">' + svgTiktok + '</a>' +
-          '<a href="#" aria-label="YouTube" data-red="youtube" class="social-icon">' + svgYoutube + '</a>' +
+          '<a href="' + FB_LINK + '" target="_blank" rel="noopener" aria-label="Facebook" data-red="facebook" class="social-icon">' + svgFacebook + '</a>' +
+          '<a href="' + TT_LINK + '" target="_blank" rel="noopener" aria-label="TikTok" data-red="tiktok" class="social-icon">' + svgTiktok + '</a>' +
         '</div>' +
         '<a href="' + WA_LINK + '" class="btn btn-primary header-cta" target="_blank" rel="noopener">Agenda tu cita</a>' +
       '</div>' +
@@ -106,9 +107,8 @@
           '<p class="footer-tagline">Recupera tu movilidad y tu bienestar con la precisión de la tecnología médica y la experiencia de nuestros especialistas.</p>' +
           '<div class="footer-social">' +
             '<a href="' + IG_LINK + '" target="_blank" rel="noopener" aria-label="Instagram" data-red="instagram" class="footer-social__icon">' + svgInstagram + '</a>' +
-            '<a href="#" aria-label="Facebook" data-red="facebook" class="footer-social__icon">' + svgFacebook + '</a>' +
-            '<a href="#" aria-label="TikTok" data-red="tiktok" class="footer-social__icon">' + svgTiktok + '</a>' +
-            '<a href="#" aria-label="YouTube" data-red="youtube" class="footer-social__icon">' + svgYoutube + '</a>' +
+            '<a href="' + FB_LINK + '" target="_blank" rel="noopener" aria-label="Facebook" data-red="facebook" class="footer-social__icon">' + svgFacebook + '</a>' +
+            '<a href="' + TT_LINK + '" target="_blank" rel="noopener" aria-label="TikTok" data-red="tiktok" class="footer-social__icon">' + svgTiktok + '</a>' +
             '<a href="' + WA_LINK + '" aria-label="WhatsApp" class="footer-social__icon" target="_blank" rel="noopener">' + svgWhatsapp + '</a>' +
           '</div>' +
         '</div>' +

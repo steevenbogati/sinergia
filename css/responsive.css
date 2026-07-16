@@ -75,7 +75,6 @@
   .footer-brand        { grid-column: auto; }
 
   .cookie-banner       { flex-direction: column; text-align: center; padding: 16px 20px; }
-  .modal-box           { padding: 28px 20px; }
   .wa-float            { bottom: 16px; right: 16px; width: 52px; height: 52px; }
 }
 

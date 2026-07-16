@@ -24,7 +24,7 @@
 
   function closeMenu() {
     // Solo actuar si el panel está abierto — evita pisar el overflow
-    // que gestionan otros componentes (p. ej. el modal de novedad).
+    // que gestionan otros componentes (p. ej. el banner de cookies).
     if (!navMenu.classList.contains('open')) return;
     navMenu.classList.remove('open');
     hamburger.classList.remove('active');

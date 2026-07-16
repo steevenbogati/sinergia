@@ -9,7 +9,9 @@
   padding: var(--section-padding);
 }
 .tecnologia-text {
-  max-width: 700px;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* --- SECCIÓN 4: Grid de robots ------------------------------ */
