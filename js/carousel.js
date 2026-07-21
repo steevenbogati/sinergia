@@ -17,7 +17,7 @@
   var currentIndex = 0;
   var slidesVisible = 3;
   var autoplayTimer = null;
-  var AUTOPLAY_MS = 4000;
+  var AUTOPLAY_MS = 2500;
 
   function getSlidesVisible() {
     if (window.innerWidth >= 1024) return 3;
