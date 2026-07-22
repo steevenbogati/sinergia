@@ -10,7 +10,11 @@
   'use strict';
 
   // Datos de contacto (edítalos aquí una sola vez para todo el sitio)
-  var WA_LINK = 'https://wa.me/593984229440';
+  var WA_NUMBER = '593984229440';
+  var WA_TEXT   = 'Hola 👋, quiero información sobre SINERGIA MED.';
+  // UTM para rastrear los clics del botón de WhatsApp (se leen con Google Analytics)
+  var WA_UTM    = 'utm_source=sitio_web&utm_medium=boton_whatsapp&utm_campaign=contacto';
+  var WA_LINK   = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(WA_TEXT) + '&' + WA_UTM;
   var IG_LINK = 'https://www.instagram.com/sinergiamed.ec';
   var FB_LINK = 'https://www.facebook.com/sinergiamed.ec';
   var TT_LINK = 'https://www.tiktok.com/@sinergiamed.ec';
@@ -127,20 +131,22 @@
           '<h4 class="footer-col__title">CONTACTOS</h4>' +
           '<ul class="footer-list">' +
             '<li><a href="' + WA_LINK + '" target="_blank" rel="noopener">📞 +593 98 422 9440</a></li>' +
-            '<li><a href="' + IG_LINK + '" target="_blank" rel="noopener" data-red="instagram">📷 @sinergia_med</a></li>' +
+            '<li><a href="mailto:cindyperez@sinergiamed.ec">✉️ cindyperez@sinergiamed.ec</a></li>' +
+            '<li><a href="' + IG_LINK + '" target="_blank" rel="noopener" data-red="instagram">📷 @sinergiamed.ec</a></li>' +
             '<li><a href="' + MAPS_LINK + '" target="_blank" rel="noopener">📍 Río Guayllabamba, Ambato — Ecuador</a></li>' +
+            '<li>🕘 Lun–Vie 9:00–18:00 · Sáb 9:00–13:00</li>' +
           '</ul>' +
         '</div>' +
       '</div>' +
     '</div>' +
     '<div class="footer-bottom">' +
-      '<div class="container"><p>Copyright © 2026 SINERGIA MED | Medical Biohacking Center</p></div>' +
+      '<div class="container"><p>Copyright © 2026 SINERGIA MED | Medical Biohacking Center · <a href="privacidad.html">Política de Privacidad</a></p></div>' +
     '</div>';
 
   /* ---- FLOTANTES: cookies + WhatsApp ---- */
   var floatingHTML =
     '<div class="cookie-banner" id="cookie-banner">' +
-      '<p>Utilizamos cookies para mejorar tu experiencia en SINERGIA MED. Consulta más en nuestra <a href="#">Política de Privacidad</a>.</p>' +
+      '<p>Utilizamos cookies para mejorar tu experiencia en SINERGIA MED. Consulta más en nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>' +
       '<button class="btn btn-primary btn--sm" id="cookie-accept">Aceptar</button>' +
     '</div>' +
     '<a href="' + WA_LINK + '" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">' +
@@ -159,6 +165,34 @@
   if (footerEl) footerEl.innerHTML = footerHTML;
 
   mount('floating-mount', floatingHTML);
+
+  /* --- Aplica UTM + mensaje a TODOS los botones de WhatsApp del sitio
+         (flotante, header, footer y los "Agenda tu cita" de cada página) --- */
+  Array.prototype.forEach.call(
+    document.querySelectorAll('a[href^="https://wa.me/"], a[href^="http://wa.me/"]'),
+    function (a) { a.setAttribute('href', WA_LINK); }
+  );
+
+  /* --- Popup de cookies: aparece hasta que se acepta, y lo recuerda --- */
+  (function () {
+    var banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+    var KEY = 'sinergia_cookies_ok';
+    var accepted = null;
+    try { accepted = localStorage.getItem(KEY); } catch (e) {}
+    if (!accepted) {
+      document.body.classList.add('cookie-open');
+      setTimeout(function () { banner.classList.add('is-visible'); }, 700);
+    }
+    var btn = document.getElementById('cookie-accept');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        try { localStorage.setItem(KEY, '1'); } catch (e) {}
+        banner.classList.remove('is-visible');
+        document.body.classList.remove('cookie-open');
+      });
+    }
+  })();
 
   /* --- Desplazar a #ancla con el offset del header fijo ---------
      El header se inyecta por JS, así que el salto nativo del navegador
