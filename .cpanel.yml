@@ -7,3 +7,4 @@ deployment:
     - /bin/cp -a assets css js "$DEPLOYPATH"
     - /bin/cp -a ./*.html "$DEPLOYPATH"
     - /bin/cp -a robots.txt sitemap.xml "$DEPLOYPATH"
+    - /bin/cp -a .htaccess "$DEPLOYPATH"
