@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | SINERGIA MED — Medical Biohacking Center · Ambato</title>
-  <meta name="description" content="Noticias y artículos de SINERGIA MED: recuperación, medicina deportiva, biohacking, tecnología y bienestar en Ambato, Ecuador." />
+  <title>Blog de recuperación y biohacking | SINERGIA MED</title>
+  <meta name="description" content="Artículos de SINERGIA MED sobre recuperación deportiva, biohacking médico, fisioterapia, tecnología, prevención de lesiones y bienestar." />
   <meta name="robots" content="index, follow" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Blog | SINERGIA MED — Medical Biohacking Center" />
-  <meta property="og:image" content="assets/logos/logo-oscuro.png" />
+  <meta property="og:title" content="Blog de recuperación y biohacking | SINERGIA MED" />
+  <meta property="og:image" content="https://sinergiamed.ec/assets/img/blog-biohacking.jpg" />
+  <meta property="og:image:secure_url" content="https://sinergiamed.ec/assets/img/blog-biohacking.jpg" />
+  <meta property="og:image:alt" content="Noticias y artículos" />
+  <meta property="og:image:width" content="900" />
+  <meta property="og:image:height" content="1350" />
+  <meta name="twitter:image:alt" content="Noticias y artículos" />
   <link rel="icon" href="assets/logos/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,92 +31,228 @@
   <meta property="og:url" content="https://sinergiamed.ec/blog.html" />
   <meta property="og:site_name" content="SINERGIA MED &middot; Medical Biohacking Center" />
   <meta property="og:locale" content="es_EC" />
-  <meta property="og:description" content="Noticias y artículos de SINERGIA MED: recuperación, medicina deportiva, biohacking, tecnología y bienestar en Ambato, Ecuador." />
+  <meta property="og:description" content="Artículos de SINERGIA MED sobre recuperación deportiva, biohacking médico, fisioterapia, tecnología, prevención de lesiones y bienestar." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blog | SINERGIA MED — Medical Biohacking Center · Ambato" />
-  <meta name="twitter:description" content="Noticias y artículos de SINERGIA MED: recuperación, medicina deportiva, biohacking, tecnología y bienestar en Ambato, Ecuador." />
-  <meta name="twitter:image" content="https://sinergiamed.ec/assets/logos/logo-oscuro.png" />
+  <meta name="twitter:title" content="Blog de recuperación y biohacking | SINERGIA MED" />
+  <meta name="twitter:description" content="Artículos de SINERGIA MED sobre recuperación deportiva, biohacking médico, fisioterapia, tecnología, prevención de lesiones y bienestar." />
+  <meta name="twitter:image" content="https://sinergiamed.ec/assets/img/blog-biohacking.jpg" />
   <!-- Datos estructurados (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://sinergiamed.ec/#organization",
-        "name": "SINERGIA MED",
-        "alternateName": "SINERGIA MED · Medical Biohacking Center",
-        "url": "https://sinergiamed.ec/",
-        "logo": "https://sinergiamed.ec/assets/logos/logo-oscuro.png",
-        "image": "https://sinergiamed.ec/assets/img/fachada.jpg",
-        "email": "cindyperez@sinergiamed.ec",
-        "telephone": "+593984229440",
-        "sameAs": [
-          "https://www.instagram.com/sinergiamed.ec",
-          "https://www.facebook.com/sinergiamed.ec",
-          "https://www.tiktok.com/@sinergiamed.ec"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://sinergiamed.ec/#organization",
+      "name": "SINERGIA MED",
+      "alternateName": "SINERGIA MED · Medical Biohacking Center",
+      "url": "https://sinergiamed.ec/",
+      "logo": "https://sinergiamed.ec/assets/logos/logo-oscuro.png",
+      "image": "https://sinergiamed.ec/assets/img/fachada.jpg",
+      "email": "cindyperez@sinergiamed.ec",
+      "telephone": "+593984229440",
+      "sameAs": [
+        "https://www.instagram.com/sinergiamed.ec",
+        "https://www.facebook.com/sinergiamed.ec",
+        "https://www.tiktok.com/@sinergiamed.ec"
+      ]
+    },
+    {
+      "@type": [
+        "MedicalClinic",
+        "LocalBusiness"
+      ],
+      "@id": "https://sinergiamed.ec/#clinic",
+      "name": "SINERGIA MED · Medical Biohacking Center",
+      "url": "https://sinergiamed.ec/",
+      "image": "https://sinergiamed.ec/assets/img/fachada.jpg",
+      "logo": "https://sinergiamed.ec/assets/logos/logo-oscuro.png",
+      "telephone": "+593984229440",
+      "email": "cindyperez@sinergiamed.ec",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Río Guayllabamba",
+        "addressLocality": "Ambato",
+        "addressRegion": "Tungurahua",
+        "addressCountry": "EC"
       },
-      {
-        "@type": ["MedicalClinic", "LocalBusiness"],
-        "@id": "https://sinergiamed.ec/#clinic",
-        "name": "SINERGIA MED · Medical Biohacking Center",
-        "url": "https://sinergiamed.ec/",
-        "image": "https://sinergiamed.ec/assets/img/fachada.jpg",
-        "logo": "https://sinergiamed.ec/assets/logos/logo-oscuro.png",
-        "telephone": "+593984229440",
-        "email": "cindyperez@sinergiamed.ec",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Río Guayllabamba",
-          "addressLocality": "Ambato",
-          "addressRegion": "Tungurahua",
-          "addressCountry": "EC"
+      "hasMap": "https://maps.app.goo.gl/xpyZshiGyJ34z3Dy6",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Ambato"
         },
-        "hasMap": "https://maps.app.goo.gl/xpyZshiGyJ34z3Dy6",
-        "areaServed": [
-          { "@type": "City", "name": "Ambato" },
-          { "@type": "AdministrativeArea", "name": "Tungurahua" }
-        ],
-        "openingHoursSpecification": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Tungurahua"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "medicalSpecialty": "Physiotherapy",
+      "parentOrganization": {
+        "@id": "https://sinergiamed.ec/#organization"
+      },
+      "sameAs": [
+        "https://www.instagram.com/sinergiamed.ec",
+        "https://www.facebook.com/sinergiamed.ec",
+        "https://www.tiktok.com/@sinergiamed.ec"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Cámara hiperbárica"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Crioterapia (criogenia)"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Láser infrarrojo de alta intensidad"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalTherapy",
+            "name": "Fisioterapia y rehabilitación"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Medicina deportiva"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sinergiamed.ec/#website",
+      "url": "https://sinergiamed.ec/",
+      "name": "SINERGIA MED",
+      "inLanguage": "es-EC",
+      "publisher": {
+        "@id": "https://sinergiamed.ec/#organization"
+      },
+      "alternateName": "SINERGIA MED · Medical Biohacking Center"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://sinergiamed.ec/blog.html#webpage",
+      "url": "https://sinergiamed.ec/blog.html",
+      "name": "Blog de recuperación y biohacking | SINERGIA MED",
+      "description": "Artículos de SINERGIA MED sobre recuperación deportiva, biohacking médico, fisioterapia, tecnología, prevención de lesiones y bienestar.",
+      "inLanguage": "es-EC",
+      "isPartOf": {
+        "@id": "https://sinergiamed.ec/#website"
+      },
+      "about": {
+        "@id": "https://sinergiamed.ec/#clinic"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": "https://sinergiamed.ec/blog.html#primaryimage",
+        "url": "https://sinergiamed.ec/assets/img/blog-biohacking.jpg",
+        "contentUrl": "https://sinergiamed.ec/assets/img/blog-biohacking.jpg",
+        "caption": "Noticias y artículos",
+        "width": 900,
+        "height": 1350
+      },
+      "breadcrumb": {
+        "@id": "https://sinergiamed.ec/blog.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 6,
+        "itemListElement": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "18:00"
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://sinergiamed.ec/articulo-camara-hiperbarica.html",
+            "name": "Cámara hiperbárica: cómo el oxígeno acelera tu recuperación"
           },
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "13:00"
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://sinergiamed.ec/articulo-criogenia.html",
+            "name": "Crioterapia de cuerpo completo: frío que activa tu energía"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://sinergiamed.ec/articulo-laser.html",
+            "name": "Láser de alta intensidad: tratar el dolor en su origen"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://sinergiamed.ec/articulo-biohacking.html",
+            "name": "¿Qué es el Medical Biohacking y por qué está cambiando la salud?"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://sinergiamed.ec/articulo-recuperacion.html",
+            "name": "Recuperación deportiva: cómo volver más fuerte tras una lesión"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://sinergiamed.ec/articulo-longevidad.html",
+            "name": "Hábitos de bienestar y longevidad respaldados por la ciencia"
           }
-        ],
-        "medicalSpecialty": "Physiotherapy",
-        "parentOrganization": { "@id": "https://sinergiamed.ec/#organization" },
-        "sameAs": [
-          "https://www.instagram.com/sinergiamed.ec",
-          "https://www.facebook.com/sinergiamed.ec",
-          "https://www.tiktok.com/@sinergiamed.ec"
-        ],
-        "makesOffer": [
-          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Cámara hiperbárica" } },
-          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Crioterapia (criogenia)" } },
-          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Láser infrarrojo de alta intensidad" } },
-          { "@type": "Offer", "itemOffered": { "@type": "MedicalTherapy", "name": "Fisioterapia y rehabilitación" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medicina deportiva" } }
         ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://sinergiamed.ec/#website",
-        "url": "https://sinergiamed.ec/",
-        "name": "SINERGIA MED · Medical Biohacking Center",
-        "inLanguage": "es-EC",
-        "publisher": { "@id": "https://sinergiamed.ec/#organization" }
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://sinergiamed.ec/blog.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://sinergiamed.ec/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Noticias y artículos",
+          "item": "https://sinergiamed.ec/blog.html"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body data-page="blog">
@@ -125,7 +266,7 @@
     <section class="hero hero--page">
       <div class="hero__bg">
         <img src="assets/img/sala-espera.jpg"
-             alt="Sala de espera de SINERGIA MED" class="hero__bg-img" />
+             alt="Sala de espera de SINERGIA MED" class="hero__bg-img" width="1080" height="720" decoding="async" fetchpriority="high" />
         <div class="hero__overlay"></div>
       </div>
       <div class="container hero__content">
@@ -145,54 +286,54 @@
         <div class="blog-grid">
 
           <article class="blog-card">
-            <a href="articulo-camara-hiperbarica.html"><img src="assets/img/camara-hiperbarica.jpg" alt="Cámara hiperbárica de SINERGIA MED" loading="lazy" class="blog-card__img" /></a>
+            <a href="articulo-camara-hiperbarica.html"><img src="assets/img/camara-hiperbarica.jpg" alt="Cámara hiperbárica de SINERGIA MED" loading="lazy" class="blog-card__img" width="1030" height="683" decoding="async" /></a>
             <div class="blog-card__body">
-              <time class="blog-card__date">Artículo</time>
+              <span class="blog-card__date">Artículo</span>
               <h3 class="blog-card__title"><a href="articulo-camara-hiperbarica.html">Cámara hiperbárica: cómo el oxígeno acelera tu recuperación</a></h3>
               <a href="articulo-camara-hiperbarica.html" class="blog-card__more">Leer más »</a>
             </div>
           </article>
 
           <article class="blog-card">
-            <a href="articulo-criogenia.html"><img src="assets/img/blog-criogenia.jpg" alt="Terapia de frío — inmersión en agua helada" loading="lazy" class="blog-card__img" /></a>
+            <a href="articulo-criogenia.html"><img src="assets/img/blog-criogenia.jpg" alt="Terapia de frío — inmersión en agua helada" loading="lazy" class="blog-card__img" width="1300" height="849" decoding="async" /></a>
             <div class="blog-card__body">
-              <time class="blog-card__date">Artículo</time>
+              <span class="blog-card__date">Artículo</span>
               <h3 class="blog-card__title"><a href="articulo-criogenia.html">Crioterapia de cuerpo completo: frío que activa tu energía</a></h3>
               <a href="articulo-criogenia.html" class="blog-card__more">Leer más »</a>
             </div>
           </article>
 
           <article class="blog-card">
-            <a href="articulo-laser.html"><img src="assets/img/blog-laser.jpg" alt="Aplicación de láser terapéutico en la rodilla" loading="lazy" class="blog-card__img" /></a>
+            <a href="articulo-laser.html"><img src="assets/img/blog-laser.jpg" alt="Aplicación de láser terapéutico en la rodilla" loading="lazy" class="blog-card__img" width="1080" height="720" decoding="async" /></a>
             <div class="blog-card__body">
-              <time class="blog-card__date">Artículo</time>
+              <span class="blog-card__date">Artículo</span>
               <h3 class="blog-card__title"><a href="articulo-laser.html">Láser de alta intensidad: tratar el dolor en su origen</a></h3>
               <a href="articulo-laser.html" class="blog-card__more">Leer más »</a>
             </div>
           </article>
 
           <article class="blog-card">
-            <a href="articulo-biohacking.html"><img src="assets/img/blog-biohacking.jpg" alt="Médica de SINERGIA MED en consulta" loading="lazy" class="blog-card__img" style="object-position: center 20%;" /></a>
+            <a href="articulo-biohacking.html"><img src="assets/img/blog-biohacking.jpg" alt="Médica de SINERGIA MED en consulta" loading="lazy" class="blog-card__img" style="object-position: center 20%;" width="900" height="1350" decoding="async" /></a>
             <div class="blog-card__body">
-              <time class="blog-card__date">Artículo</time>
+              <span class="blog-card__date">Artículo</span>
               <h3 class="blog-card__title"><a href="articulo-biohacking.html">¿Qué es el Medical Biohacking y por qué está cambiando la salud?</a></h3>
               <a href="articulo-biohacking.html" class="blog-card__more">Leer más »</a>
             </div>
           </article>
 
           <article class="blog-card">
-            <a href="articulo-recuperacion.html"><img src="assets/img/blog-recuperacion.jpg" alt="Entrenamiento de fuerza en SINERGIA MED" loading="lazy" class="blog-card__img" style="object-position: center 20%;" /></a>
+            <a href="articulo-recuperacion.html"><img src="assets/img/blog-recuperacion.jpg" alt="Entrenamiento de fuerza en SINERGIA MED" loading="lazy" class="blog-card__img" style="object-position: center 20%;" width="900" height="1350" decoding="async" /></a>
             <div class="blog-card__body">
-              <time class="blog-card__date">Artículo</time>
+              <span class="blog-card__date">Artículo</span>
               <h3 class="blog-card__title"><a href="articulo-recuperacion.html">Recuperación deportiva: cómo volver más fuerte tras una lesión</a></h3>
               <a href="articulo-recuperacion.html" class="blog-card__more">Leer más »</a>
             </div>
           </article>
 
           <article class="blog-card">
-            <a href="articulo-longevidad.html"><img src="assets/img/blog-longevidad.jpg" alt="Hábitos de bienestar y nutrición saludable" loading="lazy" class="blog-card__img" /></a>
+            <a href="articulo-longevidad.html"><img src="assets/img/blog-longevidad.jpg" alt="Hábitos de bienestar y nutrición saludable" loading="lazy" class="blog-card__img" width="1080" height="720" decoding="async" /></a>
             <div class="blog-card__body">
-              <time class="blog-card__date">Artículo</time>
+              <span class="blog-card__date">Artículo</span>
               <h3 class="blog-card__title"><a href="articulo-longevidad.html">Hábitos de bienestar y longevidad respaldados por la ciencia</a></h3>
               <a href="articulo-longevidad.html" class="blog-card__more">Leer más »</a>
             </div>
