@@ -30,7 +30,7 @@
   position: relative;
   z-index: 1;
   color: var(--color-white);
-  padding: 80px 0;
+  padding: 80px var(--container-px);
 }
 .hero__title {
   font-size: clamp(2rem, 4.5vw, 3.2rem);

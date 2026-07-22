@@ -10,7 +10,7 @@
   min-height: 58vh;
 }
 .hero--page .hero__content {
-  padding: 72px 0;
+  padding: 72px var(--container-px);
   text-align: center;
 }
 .hero--page .hero__title,
@@ -23,7 +23,7 @@
 }
 @media (max-width: 768px) {
   .hero--page { min-height: auto; }
-  .hero--page .hero__content { padding: 48px 0; }
+  .hero--page .hero__content { padding: 48px var(--container-px); }
 }
 
 /* --- Cabecera de sección centrada --------------------------- */

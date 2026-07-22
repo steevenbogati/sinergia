@@ -69,3 +69,76 @@
   font-size: 0.82rem;
   color: rgba(250,247,215,0.4);
 }
+
+/* ============================================================
+   FLOTANTES: botón de WhatsApp + banner de cookies
+   ============================================================ */
+.wa-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 950;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-whatsapp);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(37,211,102,0.45);
+  transition: transform 0.25s ease, bottom 0.3s ease;
+  animation: waPulse 2.4s ease-out infinite;
+}
+.wa-float:hover { transform: scale(1.08); }
+@keyframes waPulse {
+  0%   { box-shadow: 0 6px 18px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.5); }
+  70%  { box-shadow: 0 6px 18px rgba(37,211,102,0.45), 0 0 0 16px rgba(37,211,102,0); }
+  100% { box-shadow: 0 6px 18px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0); }
+}
+@media (prefers-reduced-motion: reduce) { .wa-float { animation: none; } }
+
+.cookie-banner {
+  position: fixed;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 960;
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid rgba(71,68,65,0.08);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transform: translateY(180%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), opacity 0.45s ease, visibility 0.45s;
+}
+.cookie-banner.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.cookie-banner p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+.cookie-banner p a { color: var(--color-accent); text-decoration: underline; }
+.cookie-banner .btn { flex-shrink: 0; white-space: nowrap; }
+
+/* Sube el botón de WhatsApp mientras el banner de cookies está visible */
+body.cookie-open .wa-float { bottom: 108px; }
+@media (max-width: 600px) {
+  body.cookie-open .wa-float { bottom: 158px; }
+}
+
+/* Enlace de la política de privacidad en el pie inferior */
+.footer-bottom a { color: var(--color-cream); text-decoration: underline; opacity: 0.75; }
+.footer-bottom a:hover { opacity: 1; }
