@@ -1,0 +1,9 @@
+# robots.txt — SINERGIA MED · Medical Biohacking Center (Ambato, Ecuador)
+# Permitimos el rastreo de todo el contenido público, incluidos los
+# rastreadores de buscadores con IA (AEO / GEO): GPTBot, ClaudeBot,
+# PerplexityBot, Google-Extended, etc.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sinergiamed.ec/sitemap.xml
