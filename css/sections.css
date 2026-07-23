@@ -215,6 +215,9 @@
   object-fit: cover;
   transition: transform 0.5s ease;
 }
+.lesion-card__img-wrap img.lesion-card__img--deportiva {
+  object-position: center top;
+}
 .lesion-card:hover .lesion-card__img-wrap img {
   transform: scale(1.05);
 }
