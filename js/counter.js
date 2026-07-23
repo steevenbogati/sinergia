@@ -7,13 +7,14 @@
 
   function animateCounter(el) {
     var target = parseInt(el.getAttribute('data-target'), 10);
+    var prefix = el.getAttribute('data-prefix') || '';
     var duration = 2000;
     var steps = 60;
     var increment = target / steps;
     var current = 0;
     var timer = setInterval(function () {
       current = Math.min(current + increment, target);
-      el.textContent = Math.floor(current).toLocaleString('es-ES');
+      el.textContent = prefix + Math.floor(current).toLocaleString('es-ES');
       if (current >= target) clearInterval(timer);
     }, duration / steps);
   }
